@@ -1,18 +1,15 @@
-import "./App.css";
-import InputForm from "./Components/InputForm";
-import Inputs from "./Components/Inputs";
+import AddUser from "./Components/Users/AddUser";
+import UsersList from "./Components/Users/UsersList";
 
 function App() {
-  const functionProp = (e) => {
-    e.preventDefault();
+  const users = () => {
     console.log(1);
   };
 
   return (
     <div>
-      <InputForm passProp={functionProp}></InputForm>
-      <Inputs></Inputs>
-      <Inputs></Inputs>
+      <AddUser />
+      <UsersList onUsers={users} />
     </div>
   );
 }
